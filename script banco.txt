@@ -1,0 +1,17 @@
+CREATE DATABASE banco_db;
+
+USE banco_db;
+
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Usuario de prueba
+INSERT INTO usuarios (usuario, password, nombre, email) VALUES 
+('admin', '1234', 'Juan Pérez', 'juan@banco.com'),
+('cliente1', 'pass123', 'María García', 'maria@banco.com');
